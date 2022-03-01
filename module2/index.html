@@ -1,30 +1,55 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>our menu</h1>
-    <div id="container">
-        <div class="boxone">
-            <h2>chicken</h2>
-            <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum consectetur quaerat obcaecati sapiente dicta, similique architecto porro quidem corporis soluta non voluptatem ratione! Quisquam labore porro expedita sit adipisci. Consectetur?</p>
-        </div>
-        <div class="boxtwo">
-            <h3>
-                meat
-            </h3>
-        <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde id a eum voluptas deserunt ipsam. Eaque vel libero labore suscipit voluptatibus laboriosam, reiciendis totam inventore vitae nisi voluptatum dolorem! Explicabo.</p>
-        </div>
-        <div class="boxthree">
-            <h4>beaf</h4>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, magnam ducimus neque mollitia id iusto ad quod iure a eveniet autem modi voluptatum repellendus odit incidunt quisquam beatae voluptas eum!</p>
-        </div>
-    </div>
+h1{
+    text-align: center;
+    font-size: larger;
+    font-weight: 100;
+    background-color: aliceblue;
+    padding: 0%;
+    margin: 0%;
+}
+#container{
+    display: grid;
+    margin-top: 100px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 2fr;
+    gap: 10px;
+}
+.boxone{
+    background-color: green;
+    font-size: medium;
+    font-family: fantasy;
+    border-radius: 4px;
+    
+}
+.boxtwo{
+    background-color: cadetblue;
+    font-size: medium;
+    font-style: italic;
+    font-weight: 100;
+    border-radius: 4px;
+}
+.boxthree{
+    background-color: aqua;
+    font-size: medium;
+    font-family: fantasy;
+    border-radius: 4px;
+    font-style: oblique;
+}
+body{
+    background-color: grey;
+    font-weight: 300;
+    font-size: large;
+    font-style: oblique;
 
-</body>
-</html>
+}
+@media screen and (max-width: 989px) {
+    #container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .boxthree {
+        grid-row-start: 2;
+        grid-column-end: span 2;
+    }
+}
